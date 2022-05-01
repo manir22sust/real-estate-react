@@ -1,17 +1,28 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import { Featured } from "./components/featured/Featured";
-import { Footer } from "./components/footer/Footer";
-import { Hero } from "./components/hero/Hero";
-import { Home } from "./components/home/Home";
 import { Navbar } from "./components/navbar/Navbar";
+import { Register } from "./pages/register/Register";
+
+import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+
+import { Footer } from "./components/footer/Footer";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Home />
-      <Featured />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+
+          <Route path="/register" element={<Register />}></Route>
+        </Routes>
+      </BrowserRouter>
+
       <Footer />
     </>
   );

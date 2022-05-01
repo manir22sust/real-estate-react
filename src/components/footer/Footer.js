@@ -12,10 +12,10 @@ export const Footer = () => {
   return (
     <div className="footer">
       <div className="social">
-        <FaFacebook className="icon" />
-        <FaInstagram className="icon" />
-        <FaTwitter className="icon" />
-        <FaPinterest className="icon" />
+        <FaFacebook style={{ color: "3B5999" }} className="icon" />
+        <FaInstagram style={{ color: "E4405F" }} className="icon" />
+        <FaTwitter style={{ color: "55ACEE" }} className="icon" />
+        <FaPinterest style={{ color: "E60023" }} className="icon" />
       </div>
       <div className="container">
         <div className="col">

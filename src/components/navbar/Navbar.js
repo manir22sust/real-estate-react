@@ -5,6 +5,7 @@ import { FaRegTimesCircle } from "react-icons/fa";
 import { BsFillHouseFill } from "react-icons/bs";
 
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -12,29 +13,31 @@ export const Navbar = () => {
   return (
     <div className="navbar">
       <div className="container">
-        <h1>
-          <span>
-            <BsFillHouseFill /> Real
-          </span>
-          Estate
-        </h1>
-        <button className="btn"> Sign In</button>
+        <Link to="/">
+          <h1>
+            <span>
+              <BsFillHouseFill /> Real
+            </span>
+            Estate
+          </h1>
+        </Link>
+        <Link to="/register">
+          <button className="btn"> Sign In</button>
+        </Link>
+
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li>
             {" "}
-            <a href="#"> Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            {" "}
-            <a href="#">Search </a>
+            <Link to="/">Search</Link>
           </li>
           <li>
-            {" "}
-            <a href="#"> About </a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            {" "}
-            <a href="#"> Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
         <div className="hamburger" onClick={handleClick}>

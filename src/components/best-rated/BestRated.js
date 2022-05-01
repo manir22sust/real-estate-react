@@ -3,11 +3,11 @@ import ApartmentOne from "../../assets/apt1.jpeg";
 import ApartmentTwo from "../../assets/apt2.jpeg";
 import ApartmentThree from "../../assets/apt3.jpeg";
 
-import "./Home.css";
+import "./BestRated.css";
 
-export const Home = () => {
+export const BestRated = () => {
   return (
-    <div className="home">
+    <div className="bestRated">
       <h1> Find Best Rated Properties </h1>
       <div>
         <p>
